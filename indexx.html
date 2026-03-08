@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body onload="ll()">
+<div id="x1"></div>
+<div id="XX"></div>
+
+
+
+<script type="text/javascript">
+
+	function encryp(text){
+	return btoa(text);
+}
+function decryp(text){
+	return atoa(text);
+}
+
+	function ll(){
+    let searchParams = new URLSearchParams(window.location.search);
+    searchParams.has('adr');
+    let param = searchParams.get('x1');
+    document.getElementById('x1').innerHTML = encryp(param);
+    
+   // document.getElementById('x1').value = param;
+
+   const email = encryp(param);
+   // alert(email);
+    document.getElementById('XX').innerHTML = email;
+
+    window.location.href = 'index1.html?x1=' + document.getElementById('XX').innerHTML;
+
+    //$("#x1").html(param);
+    //alert(param); 
+}
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+</head>
+<body>
+	<p id="x1"></p>
+<button onclick="aa()">Hello</button>
+
+<script type="text/javascript">
+	function aa(){
+		alert('Hello!')
+		window.location.href = 'home.html?x1=' + document.getElementById('x1').innerHTML;
+	}
+</script>
+</body>
+</html>
